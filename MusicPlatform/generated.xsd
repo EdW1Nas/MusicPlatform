@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Album" type="AlbumType"/>
+  <xs:complexType name="artistType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="artistStageName"/>
+      <xs:element type="xs:string" name="birthYear"/>
+      <xs:element type="xs:string" name="id"/>
+      <xs:element type="xs:string" name="origin"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="songsType">
+    <xs:sequence>
+      <xs:element name="durationSeconds" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="312"/>
+            <xs:enumeration value="210"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="xs:string" name="genre" minOccurs="0"/>
+      <xs:element name="id" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="1"/>
+            <xs:enumeration value="2"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="xs:string" name="releaseYear" minOccurs="0"/>
+      <xs:element name="songName" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="All I Know"/>
+            <xs:enumeration value="Sidewalks"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="songsType" name="songs" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AlbumType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="id"/>
+      <xs:element type="xs:string" name="albumName"/>
+      <xs:element type="xs:string" name="releaseYear"/>
+      <xs:element type="artistType" name="artist"/>
+      <xs:element type="songsType" name="songs"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

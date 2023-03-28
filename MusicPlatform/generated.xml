@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Album>
+    <id>1</id>
+    <albumName>StarBoy</albumName>
+    <releaseYear>2016</releaseYear>
+    <artist>
+        <artistStageName>The Weeknd</artistStageName>
+        <birthYear>1990</birthYear>
+        <id>1</id>
+        <origin>Canada</origin>
+    </artist>
+    <songs>
+        <songs>
+            <durationSeconds>312</durationSeconds>
+            <genre>Pop</genre>
+            <id>1</id>
+            <releaseYear>2016</releaseYear>
+            <songName>All I Know</songName>
+        </songs>
+        <songs>
+            <durationSeconds>210</durationSeconds>
+            <genre>Pop</genre>
+            <id>2</id>
+            <releaseYear>2016</releaseYear>
+            <songName>Sidewalks</songName>
+        </songs>
+    </songs>
+</Album>
